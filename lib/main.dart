@@ -14,7 +14,10 @@ import 'bloc/auth/auth_cubit.dart';
 //       enabled: true,
 //       builder: (context) {
 //         return const MyApp();
-//       })onst MyApp());
+//       }));
+// }
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
