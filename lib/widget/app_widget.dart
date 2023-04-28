@@ -1,0 +1,9 @@
+export './details/app_button.dart';
+export './details/app_textfield.dart';
+export './details/basket_img.dart';
+export './details/register_text.dart';
+export './details/user_info_banner.dart';
+export './details/custom_listile.dart';
+export './details/cart.dart';
+export './details/product_info.dart';
+export './details/product_details_widget.dart';
