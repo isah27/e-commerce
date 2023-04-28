@@ -9,12 +9,12 @@ import 'package:device_preview/device_preview.dart';
 
 import 'bloc/auth/auth_cubit.dart';
 
-void main() {
-  runApp(DevicePreview(
-      enabled: true,
-      builder: (context) {
-        return const MyApp();
-      }));
+// void main() {
+//   runApp(DevicePreview(
+//       enabled: true,
+//       builder: (context) {
+//         return const MyApp();
+//       })onst MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -28,22 +28,22 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => AuthCubit(AuthRepository()),
         ),
-       BlocProvider(
+        BlocProvider(
           create: (context) => ProductsCubit(ProductRepo()),
         ),
       ],
-      child:Sizer(builder: (context, orientation, deviceType) {
-      return MaterialApp(
-          title: 'eCommerce',
-          debugShowCheckedModeBanner: false,
-          useInheritedMediaQuery: true,
-          locale: DevicePreview.locale(context),
-          builder: DevicePreview.appBuilder,
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          onGenerateRoute: AppRoute.onGeneratedRoute);
-    }),
+      child: Sizer(builder: (context, orientation, deviceType) {
+        return MaterialApp(
+            title: 'eCommerce',
+            debugShowCheckedModeBanner: false,
+            useInheritedMediaQuery: true,
+            locale: DevicePreview.locale(context),
+            builder: DevicePreview.appBuilder,
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            onGenerateRoute: AppRoute.onGeneratedRoute);
+      }),
     );
   }
 }
